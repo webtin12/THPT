@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Tri ân thầy cô</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="webcon.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Handlee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <audio id="bg-music" autoplay loop>
+    <source src="nhacnen.mp3" type="audio/mpeg">
+</audio>
+<script>
+const music = document.getElementById("bg-music");
+
+// 🎚 Đặt âm lượng mặc định (0.0 → 1.0)
+music.volume = 0.36;   
+
+document.addEventListener("click", () => {
+    music.play();
+}, { once: true });
+</script>
+<script>
+const music = document.getElementById("bg-music");
+
+// phát khi người dùng tương tác lần đầu
+document.addEventListener("click", () => {
+    music.play();
+}, { once: true });
+</script>
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="thethao.html">Thể thao</a>
+        <a href="vannghe.html">Văn nghệ</a>
+        <a href="trian.html">Tri ân thầy cô</a>
+    </nav>
+</header>
+
+<!-- BANNER -->
+<div class="banner">
+    <h1 span style="font-size: 60px;">Những ngày xưa cũ</h1>
+</div>
+<h1 class="title">📓 Nhật kí Tri ân thầy cô</h1>
+
+<div class="diary">
+
+    <!-- =====1 ===== -->
+    <div class="entry">
+
+        <p>
+        Không có thành công nào của chúng em thiếu dấu chân thầy cô phía sau.
+        </p>
+
+        <div class="photos">
+            <img src="trian1.jpg">
+            <img src="trian1.jpg">
+        </div>
+    </div>
+
+    <!-- =====2 ===== -->
+    <div class="entry">
+        <p>
+        Những lời dạy giản dị của thầy cô năm nào chính là hành trang quý giá nhất để chúng em bước vào cuộc đời.
+        </p>
+
+        <div class="photos">
+            <img src="trian2.jpg">
+            <img src="trian2.jpg">
+        </div>
+    </div>
+    <!-- ===== 3 ===== -->
+    <div class="entry">
+        <p>
+        Có thể chúng em sẽ quên nhiều bài học, nhưng sẽ không bao giờ quên ánh mắt tin tưởng và nụ cười hiền của thầy cô.
+        </p>
+
+        <div class="photos">
+            <img src="trian3.jpg">
+            <img src="trian4.jpg">
+            <img src="trian5.jpg">
+        </div>
+    </div>
+    <!-- ===== 4 ===== -->
+    <div class="entry">
+        <p>
+        Cảm ơn thầy cô đã kiên nhẫn với những lỗi lầm của tuổi trẻ, để chúng em biết sống tốt hơn mỗi ngày.
+        </p>
+
+        <div class="photos">
+            <img src="trian6.jpg">
+            <img src="trian7.jpg">
+            <img src="trian8.jpg">
+        </div>
+    </div>
+
+</div>
+
+<a href="index.html" class="back">⬅ Quay về trang chính</a>
+<!-- ===== XEM ẢNH TO ===== -->
+<div id="lightbox" onclick="closeImg()">
+    <span class="close">✖</span>
+    <img id="bigImg">
+</div>
+
+<script>
+document.querySelectorAll(".photos img").forEach(img=>{
+    img.onclick = () =>{
+        document.getElementById("bigImg").src = img.src;
+        document.getElementById("lightbox").style.display="flex";
+    }
+})
+
+function closeImg(){
+    document.getElementById("lightbox").style.display="none";
+}
+</script>
+<!-- ===== XEM VIDEO TO ===== -->
+<div id="videobox" onclick="closeVideo()">
+    <span class="close">✖</span>
+    <video id="bigVideo" controls autoplay></video>
+</div>
+
+<script>
+document.querySelectorAll(".photos video").forEach(v=>{
+    v.onclick = ()=>{
+        document.getElementById("bigVideo").src = v.src;
+        document.getElementById("videobox").style.display="flex";
+    }
+})
+
+function closeVideo(){
+    let box=document.getElementById("videobox");
+    let vid=document.getElementById("bigVideo");
+    vid.pause();
+    box.style.display="none";
+}
+</script>
+<footer>
+<h2>📬 Liên hệ với chúng mình</h2>
+<p>📍 Trường THPT Krông Bông</p>
+<p>📞 0942 564 157</p>
+<p class="copyright">
+© 2026 – Nhóm 8 A4 K40 THPT Krông Bông
+</p>
+</footer>
+</body>
+</html>
