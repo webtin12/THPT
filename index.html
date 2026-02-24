@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Những ngày xưa cũ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<audio id="bg-music" autoplay loop>
+    <source src="nhacnen.mp3" type="audio/mpeg">
+</audio>
+<script>
+const music = document.getElementById("bg-music");
+
+// 🎚 Đặt âm lượng mặc định (0.0 → 1.0)
+music.volume = 0.36;   
+
+document.addEventListener("click", () => {
+    music.play();
+}, { once: true });
+</script>
+<script>
+const music = document.getElementById("bg-music");
+
+// phát khi người dùng tương tác lần đầu
+document.addEventListener("click", () => {
+    music.play();
+}, { once: true });
+</script>
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="thethao.html">Thể thao</a>
+        <a href="vannghe.html">Văn nghệ</a>
+        <a href="trian.html">Tri ân thầy cô</a>
+    </nav>
+</header>
+
+<!-- BANNER -->
+<div class="banner">
+    <h1 span style="font-size: 60px;">Những ngày xưa cũ</h1>
+</div>
+
+<!-- ===== BANNER ===== -->
+
+<!-- ===== NỘI DUNG ===== -->
+<div class="container">
+    <div class="grid">
+
+        <div class="card">
+        <a href="thethao.html" class="section">
+            <img src="thethao.jpg">
+        </a>
+        <div class="card-content">
+            <h3>Thể thao</h3>
+            <p>Thể thao không chỉ giúp cơ thể khỏe mạnh mà còn làm trái tim ta ấm áp hơn, vì ở đó có đồng đội, có tiếng cười, có những lần động viên nhau đứng dậy sau thất bại.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <a href="vannghe.html" class="section">
+            <img src="vannghe.jpg">
+        </a>
+            <div class="card-content">
+                <h3>Văn nghệ</h3>
+                <p>Những giai điệu tuổi học trò sẽ theo ta suốt đời, nhắc nhớ một thanh xuân hồn nhiên và đầy mộng mơ.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="trian.html" class="section">
+            <img src="trian.jpg">
+        </a>
+        <div class="card-content">
+            <h3>Tri ân thầy cô</h3>
+            <p>Mỗi bước trưởng thành của chúng em hôm nay đều có bóng dáng thầy cô âm thầm dìu dắt, và dù mai này đi đâu, lòng biết ơn ấy vẫn còn mãi.</p>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+<h2>📬 Liên hệ với chúng mình</h2>
+<p>📍 Trường THPT Krông Bông</p>
+<p>📞 0942 564 157</p>
+<p class="copyright">
+© 2026 – Nhóm 8 A4 K40 THPT Krông Bông
+</p>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.querySelector(".menu").classList.toggle("show");
+}
+</script>
+<script>
+function toggleMenu(){
+    document.querySelector(".menu").classList.toggle("show");
+}
+
+window.addEventListener("scroll", function(){
+    let navbar = document.getElementById("navbar");
+    if(window.scrollY > 80){
+        navbar.classList.remove("transparent");
+    }else{
+        navbar.classList.add("transparent");
+    }
+});
+</script>
+</body>
+</html>
